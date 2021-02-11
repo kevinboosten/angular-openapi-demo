@@ -8,6 +8,7 @@ servers:
 paths:
   /posts:
     get:
+      tags: ['posts']
       summary: Returns a list of Posts.
       description: Optional extended description in CommonMark or HTML.
       operationId: GetPosts
