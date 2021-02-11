@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  title: JSON Placeholder OpenAPI
+  description: Example spec of the well known JSON Placeholder website
+  version: 0.1.9
+servers:
+  - url: https://jsonplaceholder.typicode.com
+paths:
+  /posts:
+    get:
+      summary: Returns a list of Posts.
+      description: Optional extended description in CommonMark or HTML.
+      operationId: GetPosts
+      responses:
+        '200':
+          description: A JSON array of Posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+components:
+  schemas:
+    Post:
+      required:
+        - id
+        - userId
+        - title
+        - body
+      type: object
+      properties:
+        id:
+          type: number
+          description: record id
+          example: 1
+        userId:
+          type: string
+          description: unique user identifier
+          example: 2
+        title:
+          type: string
+          description: title of this Post
+          example: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+        body:
+          type: string
+          description: description of this post
+          example: quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
