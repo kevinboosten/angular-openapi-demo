@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  basePath: 'https://jsonplaceholder.typicode.com',
+  basePath: 'http://localhost:9000',
 };
 
 /*
