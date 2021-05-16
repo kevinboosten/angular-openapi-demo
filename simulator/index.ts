@@ -14,6 +14,23 @@ api.register({
   },
 });
 
+api.register('GetPosts', function (c, req, res) {
+  return res.status(200).json([
+    {
+      id: 1,
+      userId: 1,
+      title: 'a',
+      body: 'a',
+    },
+    {
+      id: 2,
+      userId: 2,
+      title: 'b',
+      body: 'b',
+    },
+  ]);
+});
+
 // Initialize the backend
 api.init();
 
